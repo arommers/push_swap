@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 12:33:01 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/12 12:39:45 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/12 14:03:52 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ int	main(int argc, char **argv)
 	stack_a = init_list(argc, argv);
 	// stack_b = NULL;
 	print_list(stack_a);
-	sort_a(stack_a);
+	sort(stack_a);
 	print_list(stack_a);
-	sort_a(stack_a);
+	sort(stack_a);
 	print_list(stack_a);
 	return (0);
 }
