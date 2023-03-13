@@ -6,25 +6,20 @@
 /*   By: adri <adri@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/12 09:12:55 by adri          #+#    #+#                 */
-/*   Updated: 2023/03/13 14:59:17 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/13 15:56:23 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/push_swap.h"
 
-void	sort(t_stack *head)
+void	swap(t_stack **head)
 {
-	t_stack	*next_node;
-	int		tmp_value;
-	int		tmp_index;
+	t_stack	*tmp;
 
-	if (!head || !head->next)
+	if (!*head || (*head)->next == NULL)
 		return ;
-	next_node = head->next;
-	tmp_value = head->value;
-	tmp_index = head->index;
-	head->value = next_node->value;
-	head->index = next_node->index;
-	next_node->value = tmp_value;
-	next_node->index = tmp_index;
+	tmp = (*head)->next;
+	(*head)->next = tmp->next;
+	tmp->next = *head;
+	*head = tmp;
 }

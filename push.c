@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/13 11:33:46 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/13 13:10:58 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/13 16:15:02 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,3 @@ void	push(t_stack **stack_a, t_stack **stack_b)
 		*stack_b = tmp;
 	}
 }
-

@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 12:33:01 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/13 14:57:29 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/13 18:17:35 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_stack	*init_list(int argc, char **argv)
 	while (argv[i])
 	{
 		if (i == 1)
-			stack_a = insert_new_node(atoi(argv[i]));
+			stack_a = make_new_node(atoi(argv[i]));
 		else
 			insert_at_tail(&stack_a, atoi(argv[i]));
 		i++;
@@ -39,7 +39,7 @@ int	main(int argc, char **argv)
 	stack_a = init_list(argc, argv);
 	stack_b = NULL;
 	print_list(stack_a);
-	sort(stack_a);
+	rotate_ccw(&stack_a);
 	print_list(stack_a);
 	return (0);
 }

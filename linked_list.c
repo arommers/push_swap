@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 15:11:54 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/12 15:14:14 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/13 17:46:43 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	print_list(t_stack *head)
 	}
 }
 
-t_stack	*insert_new_node(int new_value)
+t_stack	*make_new_node(int new_value)
 {
 	t_stack	*new_node;
 
