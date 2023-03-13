@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 12:33:01 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/12 15:13:41 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/13 12:06:05 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,15 @@ t_stack	*init_list(int argc, char **argv)
 int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
+	t_stack	*stack_b;
 
-	// stack_a = NULL;
 	if (argc < 2)
 		return (0);
 	stack_a = init_list(argc, argv);
-	// stack_b = NULL;
+	stack_b = NULL;
 	print_list(stack_a);
-	sort(stack_a);
+	push(&stack_a, &stack_b);
 	print_list(stack_a);
-	sort(stack_a);
-	print_list(stack_a);
+	print_list(stack_b);
 	return (0);
 }
