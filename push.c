@@ -6,25 +6,38 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/13 11:33:46 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/13 16:15:02 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/14 10:44:16 by adri          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/push_swap.h"
 
-void	push(t_stack **stack_a, t_stack **stack_b)
+void	push(t_stack **stack_from, t_stack **stack_to)
 {
 	t_stack	*tmp;
 
-	if (stack_a == NULL)
+	if (stack_from == NULL)
 		return ;
-	tmp = *stack_a;
-	*stack_a = (*stack_a)->next;
-	if (stack_b == NULL)
-		*stack_b = tmp;
+	tmp = *stack_from;
+	*stack_from = (*stack_from)->next;
+	if (stack_to == NULL)
+		*stack_to = tmp;
 	else
 	{
-		tmp->next = *stack_b;
-		*stack_b = tmp;
+		tmp->next = *stack_to;
+		*stack_to = tmp;
 	}
 }
+
+void	push_a(t_stack **stack_a, t_stack **stack_b)
+{
+	push(stack_b, stack_a);
+	write(1, "pa\n", 3);
+}
+
+void	push_b(t_stack **stack_a, t_stack **stack_b)
+{
+	push(stack_a, stack_b);
+	write(1, "pb\n", 3);
+}
+
