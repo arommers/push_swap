@@ -6,7 +6,7 @@
 /*   By: adri <adri@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/12 09:12:55 by adri          #+#    #+#                 */
-/*   Updated: 2023/03/13 15:56:23 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/14 10:09:20 by adri          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,22 @@ void	swap(t_stack **head)
 	(*head)->next = tmp->next;
 	tmp->next = *head;
 	*head = tmp;
+}
+
+void    swap_a(t_stack **head)
+{
+    swap(head);
+    write(1, "sa\n", 3);
+}
+void    swap_b(t_stack **head)
+{
+    swap(head);
+    write(1, "sb\n", 3);
+}
+
+void    swap_ab(t_stack **stack_a, t_stack **stack_b)
+{
+    swap(stack_a);
+    swap(stack_b);
+    write(1, "ss\n", 3);
 }

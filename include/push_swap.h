@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 14:49:24 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/13 17:46:58 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/14 10:11:45 by adri          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,9 @@ t_stack	*make_new_node(int new_value);
 // sort functions
 
 void	swap(t_stack **head);
+void    swap_a(t_stack **head);
+void    swap_b(t_stack **head);
+void    swap_ab(t_stack **stack_a, t_stack **stack_b);
 void	push(t_stack **stack_a, t_stack **stack_b);
 void	rotate_cw(t_stack **head);
 void	rotate_ccw(t_stack **head);
