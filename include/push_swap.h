@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 14:49:24 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/14 11:00:08 by adri          ########   odam.nl         */
+/*   Updated: 2023/03/14 16:23:51 by adri          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,8 @@ void	rotate_a(t_stack **head);
 void	rotate_b(t_stack **head);
 void	rotate_ab(t_stack **stack_a, t_stack **stack_b);
 void	rotate_ccw(t_stack **head);
+void    r_rotate_a(t_stack **head);
+void    r_rotate_b(t_stack **head);
+void    r_rotate_ab(t_stack **stack_a, t_stack **stack_b);
 
 #endif
