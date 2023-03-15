@@ -6,11 +6,24 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 15:11:54 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/13 17:46:43 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/15 22:29:30 by adri          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/push_swap.h"
+
+int	count_nodes(t_stack *head)
+{
+	int i;
+
+	i = 0;
+	while (head != NULL)
+	{
+		head = head->next;
+		i++;
+	}
+	return (i);
+}
 
 void	print_list(t_stack *head)
 {

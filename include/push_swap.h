@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 14:49:24 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/14 16:23:51 by adri          ########   odam.nl         */
+/*   Updated: 2023/03/15 22:28:20 by adri          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ t_stack	*init_list(int argc, char **argv);
 
 // linked list functions
 
+int		count_nodes(t_stack *head);
 void	print_list(t_stack *head);
 void	insert_at_tail(t_stack **head, int new_value);
 t_stack	*make_new_node(int new_value);
