@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 12:33:01 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/15 22:32:56 by adri          ########   odam.nl         */
+/*   Updated: 2023/03/15 22:37:37 by adri          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,15 @@ int	main(int argc, char **argv)
 	stack_b = NULL;
 	print_list(stack_a);
 	print_list(stack_b);
+	push_b(&stack_a, &stack_b);
+	push_b(&stack_a, &stack_b);
+	push_b(&stack_a, &stack_b);
+	print_list(stack_a);
+	print_list(stack_b);
+	r_rotate_ab(&stack_a, &stack_b);
+	print_list(stack_a);
+	print_list(stack_b);
 	printf("list size : %d\n", count_nodes(stack_a));
-	// push_b(&stack_a, &stack_b);
-	// push_b(&stack_a, &stack_b);
-	// push_b(&stack_a, &stack_b);
-	// print_list(stack_a);
-	// print_list(stack_b);
-	// r_rotate_ab(&stack_a, &stack_b);
-	// print_list(stack_a);
-	// print_list(stack_b);
+	printf("list size : %d\n", count_nodes(stack_b));
 	return (0);
 }
