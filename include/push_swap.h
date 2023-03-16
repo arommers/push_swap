@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 14:49:24 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/16 10:33:01 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/16 11:09:03 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	print_list(t_stack *head);
 void	insert_at_tail(t_stack **head, int new_value);
 t_stack	*make_new_node(int new_value);
 
-// sort functions
+// instructions
 
 void	swap(t_stack **head);
 void	swap_a(t_stack **head);
@@ -49,5 +49,9 @@ void	rotate_ccw(t_stack **head);
 void	r_rotate_a(t_stack **head);
 void	r_rotate_b(t_stack **head);
 void	r_rotate_ab(t_stack **stack_a, t_stack **stack_b);
+
+// miscellaneous
+
+int		check_list(t_stack **head);
 
 #endif
