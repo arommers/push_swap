@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/16 10:41:44 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/16 11:11:46 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/16 11:51:20 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,16 @@ int	check_list(t_stack **head)
 		head = head->next;
 	}
 	return (1);
+}
+
+void	free_stack(t_stack **head)
+{
+	t_stack	temp;
+
+	while (*head)
+	{
+		temp = *head;
+		*head = (*head)->next;
+		free(tmp);
+	}
 }

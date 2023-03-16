@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 14:49:24 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/16 11:09:03 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/16 11:16:09 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,6 @@ void	r_rotate_ab(t_stack **stack_a, t_stack **stack_b);
 // miscellaneous
 
 int		check_list(t_stack **head);
+void	error_msg(char *str);
 
 #endif
