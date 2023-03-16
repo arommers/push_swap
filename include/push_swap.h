@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 14:49:24 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/15 22:28:20 by adri          ########   odam.nl         */
+/*   Updated: 2023/03/16 10:33:01 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ t_stack	*make_new_node(int new_value);
 // sort functions
 
 void	swap(t_stack **head);
-void    swap_a(t_stack **head);
-void    swap_b(t_stack **head);
-void    swap_ab(t_stack **stack_a, t_stack **stack_b);
+void	swap_a(t_stack **head);
+void	swap_b(t_stack **head);
+void	swap_ab(t_stack **stack_a, t_stack **stack_b);
 void	push(t_stack **stack_from, t_stack **stack_to);
 void	push_a(t_stack **stack_a, t_stack **stack_b);
 void	push_b(t_stack **stack_a, t_stack **stack_b);
@@ -46,8 +46,8 @@ void	rotate_a(t_stack **head);
 void	rotate_b(t_stack **head);
 void	rotate_ab(t_stack **stack_a, t_stack **stack_b);
 void	rotate_ccw(t_stack **head);
-void    r_rotate_a(t_stack **head);
-void    r_rotate_b(t_stack **head);
-void    r_rotate_ab(t_stack **stack_a, t_stack **stack_b);
+void	r_rotate_a(t_stack **head);
+void	r_rotate_b(t_stack **head);
+void	r_rotate_ab(t_stack **stack_a, t_stack **stack_b);
 
 #endif

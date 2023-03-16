@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/13 11:33:46 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/14 10:44:16 by adri          ########   odam.nl         */
+/*   Updated: 2023/03/16 10:33:35 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,3 @@ void	push_b(t_stack **stack_a, t_stack **stack_b)
 	push(stack_a, stack_b);
 	write(1, "pb\n", 3);
 }
-

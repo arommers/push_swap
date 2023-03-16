@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/13 14:49:44 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/14 16:16:14 by adri          ########   odam.nl         */
+/*   Updated: 2023/03/16 10:30:58 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,3 @@ void	rotate_ab(t_stack **stack_a, t_stack **stack_b)
 	rotate_cw(stack_b);
 	write(1, "rr\n", 3);
 }
-

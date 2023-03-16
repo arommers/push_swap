@@ -6,7 +6,7 @@
 /*   By: adri <adri@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/14 16:15:47 by adri          #+#    #+#                 */
-/*   Updated: 2023/03/14 16:23:08 by adri          ########   odam.nl         */
+/*   Updated: 2023/03/16 10:31:29 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,21 +30,21 @@ void	rotate_ccw(t_stack **head)
 	*head = og_tail;
 }
 
-void    r_rotate_a(t_stack **head)
+void	r_rotate_a(t_stack **head)
 {
-    rotate_ccw(head);
-    write(1, "rra\n", 4);
+	rotate_ccw(head);
+	write(1, "rra\n", 4);
 }
 
-void    r_rotate_b(t_stack **head)
+void	r_rotate_b(t_stack **head)
 {
-    rotate_ccw(head);
-    write(1, "rrb\n", 4);
+	rotate_ccw(head);
+	write(1, "rrb\n", 4);
 }
 
-void    r_rotate_ab(t_stack **stack_a, t_stack **stack_b)
+void	r_rotate_ab(t_stack **stack_a, t_stack **stack_b)
 {
-    rotate_ccw(stack_a);
-    rotate_ccw(stack_b);
-    write(1, "rrr\n", 4);
+	rotate_ccw(stack_a);
+	rotate_ccw(stack_b);
+	write(1, "rrr\n", 4);
 }

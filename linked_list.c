@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 15:11:54 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/15 22:29:30 by adri          ########   odam.nl         */
+/*   Updated: 2023/03/16 10:31:49 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	count_nodes(t_stack *head)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (head != NULL)
