@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 12:33:01 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/16 10:34:01 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/16 15:58:10 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,18 +37,19 @@ int	main(int argc, char **argv)
 	if (argc < 2)
 		return (0);
 	stack_a = init_list(argc, argv);
+	set_index(stack_a);
 	stack_b = NULL;
 	print_list(stack_a);
-	print_list(stack_b);
-	push_b(&stack_a, &stack_b);
-	push_b(&stack_a, &stack_b);
-	push_b(&stack_a, &stack_b);
-	print_list(stack_a);
-	print_list(stack_b);
-	r_rotate_ab(&stack_a, &stack_b);
-	print_list(stack_a);
-	print_list(stack_b);
-	printf("list size : %d\n", count_nodes(stack_a));
-	printf("list size : %d\n", count_nodes(stack_b));
+	// print_list(stack_b);
+	// push_b(&stack_a, &stack_b);
+	// push_b(&stack_a, &stack_b);
+	// push_b(&stack_a, &stack_b);
+	// print_list(stack_a);
+	// print_list(stack_b);
+	// r_rotate_ab(&stack_a, &stack_b);
+	// print_list(stack_a);
+	// print_list(stack_b);
+	// printf("list size : %d\n", count_nodes(stack_a));
+	// printf("list size : %d\n", count_nodes(stack_b));
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 14:49:24 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/16 11:52:43 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/16 15:58:18 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
+# include <limits.h>
 
 typedef struct s_stack {
 	int				value;
@@ -23,7 +24,9 @@ typedef struct s_stack {
 	struct s_stack	*next;
 }	t_stack;
 
+// initialisation
 t_stack	*init_list(int argc, char **argv);
+void	set_index(t_stack *head);
 
 // linked list functions
 
