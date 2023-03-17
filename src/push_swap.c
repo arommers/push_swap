@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 12:33:01 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/17 14:14:30 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/17 16:18:57 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ int	main(int argc, char **argv)
 	stack_b = NULL;
 	set_index(stack_a, count_nodes(stack_a));
 	print_list(stack_a);
+	
 	// rotate_a(&stack_a);
 	// rotate_a(&stack_a);
 	// r_rotate_a(&stack_a);
