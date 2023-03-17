@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 14:49:24 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/16 15:58:18 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/17 09:59:10 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ typedef struct s_stack {
 
 // initialisation
 t_stack	*init_list(int argc, char **argv);
-void	set_index(t_stack *head);
+void	set_index(t_stack *head, int list_size);
 
 // linked list functions
 
