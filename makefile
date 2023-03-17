@@ -6,7 +6,7 @@
 #    By: adri <adri@student.codam.nl>                 +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/03/15 13:22:32 by adri          #+#    #+#                  #
-#    Updated: 2023/03/17 15:16:00 by arommers      ########   odam.nl          #
+#    Updated: 2023/03/17 15:47:40 by arommers      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,29 +22,37 @@ SRC =	./src/initialize.c ./src/linked_list.c	\
 OBJ_DIR = obj
 OBJ = $(addprefix $(OBJ_DIR)/, $(notdir $(SRC:.c=.o)))
 
-BOLD    := \033[1m./SRC/
-RED     := \033[31;1m
-GREEN   := \033[32;1m
-YELLOW  := \033[33;1m
-BLUE    := \033[34;1m
-MAGENTA := \033[35;1m
-CYAN    := \033[36;1m
-WHITE   := \033[37;1m
-RESET	= \x1b[0m
+BLACK   := \033[30m
+RED     := \033[31m
+GREEN   := \033[32m
+YELLOW  := \033[33m
+BLUE 	:= \033[96m
+MAGENTA := \033[38;5;206m
+CYAN    := \033[36m
+WHITE   := \033[37m
+RESET   := \033[0m
+BOLD    := \033[1m
+DIM     := \033[2m
+ITALIC  := \033[3m
+UNDER   := \033[4m
+BLINK   := \033[5m
+REVERSE := \033[7m
+HIDDEN  := \033[8m
+PINK 	:= \033[35m
 
 all: $(NAME)
 
 $(NAME): $(OBJ) 
-	@echo "Compiled with $(BLUE)$(CFLAGS)$(RESET)"
+	@echo "Compiled with $(BLUE)$(BOLD)$(CFLAGS)$(RESET)"
 	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
-	@echo "$(BLUE)-------------------------------------------"
-	@echo "	$(NAME) = NOW READY FOR USE!"
-	@echo "-------------------------------------------$(RESET)"
+	@echo "$(PINK)$(BOLD)----------------------------------------"
+	@echo "     $(NAME) = NOW READY FOR USE!"
+	@echo "----------------------------------------$(RESET)"
 
 
 $(OBJ_DIR)/%.o: ./src/%.c
 	@mkdir -p $(OBJ_DIR)
-	@echo "Compiled ✅ $(BLUE) $^ $(RESET)"
+	@echo "Compiled ✅ $(PINK) $(BOLD) $^ $(RESET)"
 	@$(CC) $(CFLAGS) $(INCLUDE) -c -o $@ $^
 
 clean:
@@ -53,7 +61,7 @@ clean:
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "$(GREEN) $(NAME) $(RESET) Cleansed ✅"
+	@echo "$(BLUE) $(BOLD)$(NAME) $(RESET) Cleansed ✅"
 
 re: fclean all
 
