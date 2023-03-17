@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 14:49:24 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/17 09:59:10 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/17 13:12:52 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,11 @@ void	rotate_ccw(t_stack **head);
 void	r_rotate_a(t_stack **head);
 void	r_rotate_b(t_stack **head);
 void	r_rotate_ab(t_stack **stack_a, t_stack **stack_b);
+
+// sorting
+
+int		find_biggest(t_stack *head);
+void	sort_three(t_stack **head);
 
 // miscellaneous
 
