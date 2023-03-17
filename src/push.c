@@ -6,11 +6,11 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/13 11:33:46 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/16 10:33:35 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/17 14:09:36 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/push_swap.h"
+#include "../include/push_swap.h"
 
 void	push(t_stack **stack_from, t_stack **stack_to)
 {

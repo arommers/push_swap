@@ -6,11 +6,11 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/17 11:35:24 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/17 13:12:33 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/17 14:09:51 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/push_swap.h"
+#include "../include/push_swap.h"
 
 int	find_biggest(t_stack *head)
 {

@@ -6,11 +6,11 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 12:33:01 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/17 13:24:17 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/17 14:14:30 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/push_swap.h"
+#include "../include/push_swap.h"
 
 t_stack	*init_list(int argc, char **argv)
 {
@@ -18,6 +18,8 @@ t_stack	*init_list(int argc, char **argv)
 	int		i;
 
 	i = 1;
+	if (!argc)
+		exit (0);
 	while (argv[i])
 	{
 		if (i == 1)

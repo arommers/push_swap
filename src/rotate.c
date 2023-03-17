@@ -6,11 +6,11 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/13 14:49:44 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/17 12:38:37 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/17 14:09:47 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/push_swap.h"
+#include "../include/push_swap.h"
 
 void	rotate_cw(t_stack **head)
 {

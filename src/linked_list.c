@@ -6,11 +6,11 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 15:11:54 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/16 15:39:19 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/17 14:09:24 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/push_swap.h"
+#include "../include/push_swap.h"
 
 int	count_nodes(t_stack *head)
 {

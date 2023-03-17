@@ -6,11 +6,11 @@
 /*   By: adri <adri@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/14 16:15:47 by adri          #+#    #+#                 */
-/*   Updated: 2023/03/16 14:01:58 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/17 14:09:43 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/push_swap.h"
+#include "../include/push_swap.h"
 
 void	rotate_ccw(t_stack **head)
 {
