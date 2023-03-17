@@ -6,7 +6,7 @@
 #    By: adri <adri@student.codam.nl>                 +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/03/15 13:22:32 by adri          #+#    #+#                  #
-#    Updated: 2023/03/17 14:29:35 by arommers      ########   odam.nl          #
+#    Updated: 2023/03/17 15:16:00 by arommers      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ SRC =	./src/initialize.c ./src/linked_list.c	\
 		./src/push.c ./src/r_rotate.c			\
 		./src/rotate.c ./src/small_sort.c		\
 		./src/swap.c
-OBJ = $(SRC:.c=.o)
+OBJ_DIR = obj
+OBJ = $(addprefix $(OBJ_DIR)/, $(notdir $(SRC:.c=.o)))
 
 BOLD    := \033[1m./SRC/
 RED     := \033[31;1m
@@ -41,11 +42,13 @@ $(NAME): $(OBJ)
 	@echo "-------------------------------------------$(RESET)"
 
 
-%.o: %.c
+$(OBJ_DIR)/%.o: ./src/%.c
+	@mkdir -p $(OBJ_DIR)
 	@echo "Compiled ✅ $(BLUE) $^ $(RESET)"
 	@$(CC) $(CFLAGS) $(INCLUDE) -c -o $@ $^
 
 clean:
+	@rm -rf $(OBJ_DIR)
 	@rm -f $(OBJ)
 
 fclean: clean
