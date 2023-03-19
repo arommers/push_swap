@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 14:49:24 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/19 12:45:11 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/19 14:29:35 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void	r_rotate_ab(t_stack **stack_a, t_stack **stack_b);
 
 int		find_biggest(t_stack *head);
 void	sort_three(t_stack **head);
+void	sort_five(t_stack **stack_a, t_stack **stack_b);
 void	radix_sort(t_stack **stack_a, t_stack **stack_b);
 
 // input checks
@@ -65,7 +66,7 @@ int		check_doubles(int argc, char **argv);
 
 // miscellaneous
 
-int		check_list(t_stack **head);
+int		sorted(t_stack **head);
 void	error_msg(char *str);
 void	free_stack(t_stack **head);
 

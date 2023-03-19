@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/17 11:35:24 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/17 14:09:51 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/19 15:07:10 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,23 @@ void	sort_three(t_stack **head)
 		r_rotate_a(head);
 	if ((*head)->index > (*head)->next->index)
 		swap_a(head);
+}
+
+void	sort_five(t_stack **stack_a, t_stack **stack_b)
+{
+	int	size;
+
+	size = count_nodes(*stack_a);
+	while (size--)
+	{
+		if ((*stack_a)->index == 0 || (*stack_a)->index == 1)
+			push_b(stack_a, stack_b);
+		else
+			rotate_a(stack_a);
+	}
+	sort_three(stack_a);
+	push_a(stack_a, stack_b);
+	push_a(stack_a, stack_b);
+	if ((*stack_a)->index > (*stack_a)->next->index)
+		swap_a(stack_a);
 }

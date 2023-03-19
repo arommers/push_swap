@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/16 10:41:44 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/17 14:26:09 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/19 14:25:08 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	error_msg(char *str)
 	exit (0);
 }
 
-int	check_list(t_stack **head)
+int	sorted(t_stack **head)
 {
 	t_stack	*tmp;
 
