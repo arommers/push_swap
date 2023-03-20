@@ -6,7 +6,7 @@
 #    By: adri <adri@student.codam.nl>                 +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/03/15 13:22:32 by adri          #+#    #+#                  #
-#    Updated: 2023/03/19 12:42:35 by arommers      ########   odam.nl          #
+#    Updated: 2023/03/20 20:47:04 by adri          ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,7 @@ SRC =	./src/initialize.c ./src/linked_list.c	\
 		./src/miscellaneous.c ./src/push_swap.c	\
 		./src/push.c ./src/r_rotate.c			\
 		./src/rotate.c ./src/small_sort.c		\
-		./src/swap.c ./src/input_check.c		\
-		./src/radix.c
+		./src/swap.c ./src/input_check.c
 OBJ_DIR = obj
 OBJ = $(addprefix $(OBJ_DIR)/, $(notdir $(SRC:.c=.o)))
 

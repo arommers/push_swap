@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 14:49:24 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/19 14:29:35 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/20 20:28:51 by adri          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ int		find_biggest(t_stack *head);
 void	sort_three(t_stack **head);
 void	sort_five(t_stack **stack_a, t_stack **stack_b);
 void	radix_sort(t_stack **stack_a, t_stack **stack_b);
+void	sort_stack(t_stack **stack_a, t_stack **stack_b);
 
 // input checks
 
