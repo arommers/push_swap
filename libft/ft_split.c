@@ -6,13 +6,13 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/04 14:25:35 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/21 14:43:24 by adri          ########   odam.nl         */
+/*   Updated: 2023/03/21 16:10:01 by adri          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	**ft_free(char **s)
+char	**ft_free(char **s)
 {
 	int	i;
 

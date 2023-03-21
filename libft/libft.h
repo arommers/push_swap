@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/14 16:51:47 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/21 12:35:26 by adri          ########   odam.nl         */
+/*   Updated: 2023/03/21 16:10:09 by adri          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 char				*ft_itoa(int n);
+char				**ft_free(char **s);
 char				**ft_split(char const *s, char c);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_strtrim(char const *s1, char const *set);

@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/17 11:35:24 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/21 09:30:15 by adri          ########   odam.nl         */
+/*   Updated: 2023/03/21 19:54:36 by adri          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void	sort_five(t_stack **stack_a, t_stack **stack_b)
 	int	size;
 
 	size = count_nodes(*stack_a);
+	printf("test\n");
 	while (size--)
 	{
 		if ((*stack_a)->index == 0 || (*stack_a)->index == 1)

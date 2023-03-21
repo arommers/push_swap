@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/19 11:14:39 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/21 15:32:05 by adri          ########   odam.nl         */
+/*   Updated: 2023/03/21 21:52:35 by adri          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,23 @@ int	check_doubles(int argc, char **argv)
 	return (0);
 }
 
+int	check_nbr(char *argv)
+{
+	int	i;
+
+	i = 0;
+	if (argv[i] == '-')
+		i++;
+	while (argv[i])
+	{
+		if (ft_isdigit(argv[i]))
+			return (1);
+		i++;
+	}
+	return (0);	
+}
+
+
 void	check_input(int argc, char **argv)
 {
 	int		i;
@@ -40,19 +57,34 @@ void	check_input(int argc, char **argv)
 
 	i = 0;
 	if (argc == 2)
-		ft_split(argv[1], ' ');
+	{
+		tmp_array = ft_split(argv[1], ' ');
+		// int j = 0;
+    	// while (tmp_array[j] != NULL)
+		// {
+       	// 	printf("%s ", tmp_array[j]);
+        // 	j++;
+    	// }
+   		// printf("\n");
+	}
 	else
-		tmp_array = argv + 1;
+	{
+		i = 1;
+		tmp_array = argv;
+	}
 	while (tmp_array[i])
 	{
+		// printf("tmp_argv: %s\n", tmp_array[i]);
 		tmp_argv = ft_atoi(tmp_array[i]);
+		// printf("tmp_argv: %d\n", tmp_argv);
 		if (tmp_argv < INT_MIN || tmp_argv > INT_MAX)
 			error_msg("ERROR");
 		if (check_doubles(argc, tmp_array))
 			error_msg("ERROR");
-		if (!check_nbr())
+		if (!check_nbr(tmp_array[i]))
 			error_msg("ERROR");
 		i++;
 	}
-	ft_free (tmp_array);
+	if (argc == 2)
+		ft_free (tmp_array);
 }

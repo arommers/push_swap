@@ -6,7 +6,7 @@
 #    By: adri <adri@student.codam.nl>                 +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/03/15 13:22:32 by adri          #+#    #+#                  #
-#    Updated: 2023/03/21 12:27:44 by adri          ########   odam.nl          #
+#    Updated: 2023/03/21 19:45:28 by adri          ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ all: $(NAME)
 
 $(NAME): $(LIBFT) $(OBJ) 
 	@echo "Compiled with $(BLUE)$(BOLD)$(CFLAGS)$(RESET)"
-	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIBFT)
 	@echo "$(PINK)$(BOLD)----------------------------------------"
 	@echo "     $(NAME) = NOW READY FOR USE!"
 	@echo "----------------------------------------$(RESET)"

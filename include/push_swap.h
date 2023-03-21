@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 14:49:24 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/20 20:28:51 by adri          ########   odam.nl         */
+/*   Updated: 2023/03/21 16:21:43 by adri          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <limits.h>
+# include "../libft/libft.h"
 
 typedef struct s_stack {
 	int				value;
@@ -63,6 +64,8 @@ void	sort_stack(t_stack **stack_a, t_stack **stack_b);
 
 // input checks
 
+void	check_input(int argc, char **argv);
+int		check_nbr(char *argv);
 int		check_doubles(int argc, char **argv);
 
 // miscellaneous
