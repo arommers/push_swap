@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   small_sort.c                                       :+:    :+:            */
+/*   sorting.c                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/17 11:35:24 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/20 20:46:27 by adri          ########   odam.nl         */
+/*   Updated: 2023/03/21 09:30:15 by adri          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,4 +100,9 @@ void	sort_stack(t_stack **stack_a, t_stack **stack_b)
 		sort_five(stack_a, stack_b);
 	else if (!sorted(stack_a))
 		radix_sort(stack_a, stack_b);
+	else
+	{
+		free_stack(stack_a);
+		free_stack(stack_b);
+	}
 }

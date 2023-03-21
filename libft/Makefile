@@ -1,27 +1,49 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         ::::::::             #
-#    makefile                                           :+:    :+:             #
+#    Makefile                                           :+:    :+:             #
 #                                                      +:+                     #
-#    By: adri <adri@student.codam.nl>                 +#+                      #
+#    By: arommers <arommers@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
-#    Created: 2023/03/15 13:22:32 by adri          #+#    #+#                  #
-#    Updated: 2023/03/21 12:27:44 by adri          ########   odam.nl          #
+#    Created: 2022/10/10 14:07:45 by arommers      #+#    #+#                  #
+#    Updated: 2023/03/21 10:21:47 by adri          ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-NAME = push_swap
-LIBFT = ./libft/libft.a
-INCLUDE = -I./include
-SRC =	./src/initialize.c ./src/linked_list.c	\
-		./src/miscellaneous.c ./src/push_swap.c	\
-		./src/push.c ./src/r_rotate.c			\
-		./src/rotate.c ./src/sorting.c		\
-		./src/swap.c ./src/input_check.c
+NAME = libft.a
+SRC =  ft_split.c ft_itoa.c 			\
+		ft_strmapi.c ft_striteri.c 		\
+		ft_strtrim.c ft_strjoin.c 		\
+		ft_substr.c ft_putnbr_fd.c 		\
+		ft_putendl_fd.c ft_putstr_fd.c 	\
+		ft_putchar_fd.c ft_strdup.c 	\
+		ft_calloc.c ft_strnstr.c 		\
+		ft_strlcat.c ft_memcmp.c 		\
+		ft_atoi.c ft_strnstr.c 			\
+		ft_memchr.c ft_memset.c 		\
+		ft_memcpy.c ft_memmove.c 		\
+		ft_strlcat.c ft_strlcpy.c 		\
+		ft_bzero.c ft_isalpha.c 		\
+		ft_toupper.c ft_isdigit.c 		\
+		ft_tolower.c ft_isalnum.c 		\
+		ft_strchr.c ft_isascii.c 		\
+		ft_isprint.c ft_strrchr.c 		\
+		ft_strlen.c ft_strncmp.c		\
+		ft_lstnew.c ft_lstadd_front.c 	\
+		ft_lstsize.c ft_lstlast.c 		\
+		ft_lstadd_back.c ft_lstdelone.c \
+		ft_lstclear.c ft_lstiter.c 		\
+		ft_lstmap.c get_next_line.c		\
+		get_next_line_utils.c			\
+		ft_printf.c ft_print_hex.c		\
+		ft_print_ptr.c					\
+		ft_print_various.c				\
+		ft_print_unsigned.c
+
 OBJ_DIR = obj
-OBJ = $(addprefix $(OBJ_DIR)/, $(notdir $(SRC:.c=.o)))
+OBJ = $(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
 
 BLACK   := \033[30m
 RED     := \033[31m
@@ -43,30 +65,25 @@ PINK 	:= \033[35m
 
 all: $(NAME)
 
-$(NAME): $(LIBFT) $(OBJ) 
+$(NAME): $(OBJ)
 	@echo "Compiled with $(BLUE)$(BOLD)$(CFLAGS)$(RESET)"
-	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+	@ar -rcs $@ $^
 	@echo "$(PINK)$(BOLD)----------------------------------------"
 	@echo "     $(NAME) = NOW READY FOR USE!"
 	@echo "----------------------------------------$(RESET)"
-
-$(LIBFT):
-	@$(MAKE) -C ./libft
-
-$(OBJ_DIR)/%.o: ./src/%.c
+	
+$(OBJ_DIR)/%.o: %.c
 	@mkdir -p $(OBJ_DIR)
 	@echo "Compiled ✅ $(PINK) $(BOLD) $^ $(RESET)"
 	@$(CC) $(CFLAGS) $(INCLUDE) -c -o $@ $^
+	
 
 clean:
-	@$(MAKE) clean -C ./libft
 	@rm -rf $(OBJ_DIR)
 	@rm -f $(OBJ)
-
+	
 fclean: clean
-	@$(MAKE) fclean -C ./libft
 	@rm -f $(NAME)
-	@echo "$(BLUE) $(BOLD)$(NAME) $(RESET) Cleansed ✅"
 
 re: fclean all
 
