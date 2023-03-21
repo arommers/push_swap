@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/04 14:25:35 by arommers      #+#    #+#                 */
-/*   Updated: 2022/11/04 15:35:14 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/21 14:43:24 by adri          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ char	**ft_split(char const *s, char c)
 			while (*s != c && *s)
 				s++;
 			new[i] = ft_substr(wordstart, 0, s - wordstart);
-			if (!**new)
+			if (!new[i])
 				return (ft_free(new));
 			i++;
 		}
