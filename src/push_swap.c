@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 12:33:01 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/21 22:01:06 by adri          ########   odam.nl         */
+/*   Updated: 2023/03/22 19:58:41 by adri          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,27 @@
 t_stack	*init_list(int argc, char **argv)
 {
 	t_stack	*stack_a;
+	char	**tmp;
 	int		i;
 
-	i = 1;
-	if (!argc)
-		exit (0);		
-	while (argv[i])
+	i = 0;
+	if (argc == 2)
 	{
-		if (i == 1)
-			stack_a = make_new_node(ft_atoi(argv[i]));
+		tmp = ft_split(argv[1], ' ');
+		i = -1;
+	}
+	else
+		tmp = argv;
+	while (argv[++i])
+	{
+		if (i == 0)
+			stack_a = make_new_node(ft_atoi(tmp[i]));
 		else
-			insert_at_tail(&stack_a, ft_atoi(argv[i]));
+			insert_at_tail(&stack_a, ft_atoi(tmp[i]));
 		i++;
 	}
+	if (argc == 2)
+		ft_free(tmp);
 	return (stack_a);
 }
 
