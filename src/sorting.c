@@ -6,11 +6,11 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/17 11:35:24 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/21 19:54:36 by adri          ########   odam.nl         */
+/*   Updated: 2023/03/23 09:42:57 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 int	find_biggest(t_stack *head)
 {
@@ -46,7 +46,6 @@ void	sort_five(t_stack **stack_a, t_stack **stack_b)
 	int	size;
 
 	size = count_nodes(*stack_a);
-	printf("test\n");
 	while (size--)
 	{
 		if ((*stack_a)->index == 0 || (*stack_a)->index == 1)
@@ -93,7 +92,7 @@ void	radix_sort(t_stack **stack_a, t_stack **stack_b)
 void	sort_stack(t_stack **stack_a, t_stack **stack_b)
 {
 	int	size;
-	
+
 	size = count_nodes(*stack_a);
 	if (!sorted(stack_a) && size <= 3)
 		sort_three(stack_a);

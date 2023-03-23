@@ -6,11 +6,11 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/19 11:14:39 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/22 19:59:29 by adri          ########   odam.nl         */
+/*   Updated: 2023/03/23 09:42:30 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 int	check_doubles(int argc, char **argv)
 {
@@ -45,7 +45,7 @@ int	check_nbr(char *argv)
 			return (1);
 		i++;
 	}
-	return (0);	
+	return (0);
 }
 
 

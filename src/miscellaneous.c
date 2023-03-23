@@ -6,11 +6,11 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/16 10:41:44 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/19 14:25:08 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/23 09:42:39 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 void	error_msg(char *str)
 {
