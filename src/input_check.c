@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/19 11:14:39 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/23 13:28:15 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/23 16:36:28 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	check_nbr(char *argv)
 void	check_input(int argc, char **argv)
 {
 	int		i;
-	int		tmp_argv;
+	long	tmp_argv;
 	char	**tmp_array;
 
 	i = 0;
