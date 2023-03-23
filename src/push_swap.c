@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 12:33:01 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/23 09:43:24 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/23 13:00:34 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int	main(int argc, char **argv)
 	stack_b = NULL;
 	set_index(stack_a, count_nodes(stack_a));
 	sort_stack(&stack_a, &stack_b);
-	print_list(stack_a);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
 	return (0);

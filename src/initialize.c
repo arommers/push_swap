@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/16 12:56:51 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/23 10:38:09 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/23 12:59:51 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,5 @@ t_stack	*init_list(int argc, char **argv)
 	}
 	if (argc == 2)
 		ft_free(tmp);
-	print_list(stack_a);
 	return (stack_a);
 }

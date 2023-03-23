@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/16 10:41:44 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/23 09:42:39 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/23 12:54:19 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,14 @@ void	free_stack(t_stack **head)
 		*head = (*head)->next;
 		free(tmp);
 	}
+}
+
+int	count_arg(char **array)
+{
+	int	i;
+
+	i = 0;
+	while (array[i])
+		i++;
+	return (i);
 }

@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 14:49:24 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/21 16:21:43 by adri          ########   odam.nl         */
+/*   Updated: 2023/03/23 12:54:32 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,12 +66,14 @@ void	sort_stack(t_stack **stack_a, t_stack **stack_b);
 
 void	check_input(int argc, char **argv);
 int		check_nbr(char *argv);
-int		check_doubles(int argc, char **argv);
+int		check_doubles(char **argv);
 
 // miscellaneous
 
 int		sorted(t_stack **head);
 void	error_msg(char *str);
 void	free_stack(t_stack **head);
+int		count_arg(char **array);
+
 
 #endif
