@@ -6,7 +6,7 @@
 #    By: adri <adri@student.codam.nl>                 +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/03/15 13:22:32 by adri          #+#    #+#                  #
-#    Updated: 2023/03/21 19:45:28 by adri          ########   odam.nl          #
+#    Updated: 2023/03/23 15:54:15 by arommers      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,9 @@ INCLUDE = -I./include
 SRC =	./src/initialize.c ./src/linked_list.c	\
 		./src/miscellaneous.c ./src/push_swap.c	\
 		./src/push.c ./src/r_rotate.c			\
-		./src/rotate.c ./src/sorting.c		\
-		./src/swap.c ./src/input_check.c
+		./src/rotate.c ./src/sorting.c			\
+		./src/swap.c ./src/input_check.c		\
+		./src/sort_util.c
 OBJ_DIR = obj
 OBJ = $(addprefix $(OBJ_DIR)/, $(notdir $(SRC:.c=.o)))
 

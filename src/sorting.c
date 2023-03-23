@@ -6,27 +6,11 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/17 11:35:24 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/23 09:42:57 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/23 16:13:25 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-int	find_biggest(t_stack *head)
-{
-	int		big;
-	t_stack	*tmp;
-
-	big = INT_MIN;
-	tmp = head;
-	while (tmp)
-	{
-		if (tmp->index > big)
-			big = tmp->index;
-		tmp = tmp->next;
-	}
-	return (big);
-}
 
 void	sort_three(t_stack **head)
 {
@@ -67,11 +51,9 @@ void	radix_sort(t_stack **stack_a, t_stack **stack_b)
 	int	i;
 	int	j;
 
-	biggest_nbr = find_biggest(*stack_a) - 1;
-	max_bits = 0;
+	biggest_nbr = find_biggest(*stack_a);
+	max_bits = find_bits(biggest_nbr);
 	i = 0;
-	while ((biggest_nbr >> max_bits) != 0)
-		max_bits++;
 	while (i < max_bits)
 	{
 		j = 0;

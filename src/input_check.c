@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/19 11:14:39 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/23 12:55:15 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/23 13:28:15 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	check_input(int argc, char **argv)
 	else
 	{
 		i = 1;
-		tmp_array = argv;
+		tmp_array = argv + 1;
 	}
 	while (tmp_array[i])
 	{

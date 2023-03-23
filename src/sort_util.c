@@ -1,32 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   push_swap.c                                        :+:    :+:            */
+/*   sort_util.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/02/27 12:33:01 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/23 16:13:39 by arommers      ########   odam.nl         */
+/*   Created: 2023/03/23 15:49:39 by arommers      #+#    #+#                 */
+/*   Updated: 2023/03/23 16:17:45 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+int	find_biggest(t_stack *head)
 {
-	t_stack	*stack_a;
-	t_stack	*stack_b;
+	int		big;
+	t_stack	*tmp;
 
-	if (argc < 2)
-		return (0);
-	check_input(argc, argv);
-	stack_a = init_list(argc, argv);
-	stack_b = NULL;
-	set_index(stack_a, count_nodes(stack_a));
-	// print_list(stack_a);
-	sort_stack(&stack_a, &stack_b);
-	// print_list(stack_a);
-	free_stack(&stack_a);
-	free_stack(&stack_b);
-	return (0);
+	big = INT_MIN;
+	tmp = head;
+	while (tmp)
+	{
+		if (tmp->index > big)
+			big = tmp->index;
+		tmp = tmp->next;
+	}
+	return (big);
+}
+
+int	find_bits(int biggest_nbr)
+{
+	int	max_bits;
+
+	max_bits = 0;
+	while (biggest_nbr > 0)
+	{
+		biggest_nbr >>= 1;
+		max_bits++;
+	}
+	return (max_bits);
 }
