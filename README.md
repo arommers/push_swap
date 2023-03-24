@@ -135,3 +135,4 @@ As you can see, the list is now completely sorted.
 
 - [Radix sort](https://medium.com/nerd-for-tech/push-swap-tutorial-fa746e6aba1e)
 - [Visualizer](https://github.com/o-reo/push_swap_visualizer)
+- [Bitwise operators](https://www.programiz.com/c-programming/bitwise-operators)
