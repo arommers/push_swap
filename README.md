@@ -57,14 +57,14 @@ These moves are realized by pointer manipulation in our linked lists.
 
 ## Algorithm
 
-When approaching the Push Swap project, one of the biggest challenges was deciding which sorting algorithm to use. There amount of algorithms to choose from, each with its own strengths and weaknesses are plenty. However, at the time, I had limited knowledge of the efficiency of these algorithms, so it was challenging to make an informed decision.
+When approaching the Push Swap project, one of the biggest challenges was deciding which sorting algorithm to use. The amount of algorithms to choose from, each with its own strengths and weaknesses, are plenty. However, at the time, I had limited knowledge of the efficiency of these algorithms, so it was challenging to make an informed decision.
 
 After some research and experimentation, I ultimately chose to implement radix sorting. Radix sort is a non-comparative sorting algorithm that sorts data by grouping elements into "buckets" based on their digits or bits. In our case the two buckets are our two stacks. I was drawn to radix sorting because of its efficiency with large numbers of input and the use of bitwise operations. Up until this point I knew of bitwise operations, but never had the opportunity to apply them. It seemed like a great opportinity.
 
 The radix sort algorithm is for non-negative integers. However, we’ll have negative numbers in this project, so we should simplify the numbers before we start. 
 
-The reason for this is twofold. First, Radix sort is a sorting algorithm that works by sorting the elements based on their digits. It sorts the elements by comparing the digits at different positions in each element. Since radix sort relies on the relative order of digits within the elements,  it can only sort non-negative integers by their binary, decimal, or other positional representation. Negative integers cannot be sorted directly with   radix sort because their binary representation involves a sign bit.\
-Second, because radix's efficienct is based on the amount of bits respresenting an integer. If we can reduce our big numbers to, at maximum, the        biggest index in our linked list, it will significantly reduce
+The reason for this is twofold. First, Radix sort is a sorting algorithm that works by sorting the elements based on their digits. It sorts the elements by comparing the digits at different positions in each element. Since radix sort relies on the relative order of digits within the elements, it can only sort non-negative integers by their binary, decimal, or other positional representation. Negative integers cannot be sorted directly with radix sort because their binary representation involves a sign bit.\
+Second, because radix's efficiency is based on the amount of bits respresenting an integer. If we can reduce our big numbers to, at maximum, the        biggest index in our linked list, it will significantly reduce the number of operations needed to sort.
 
 For example, if we need to sort these numbers
 
