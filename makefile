@@ -6,12 +6,12 @@
 #    By: adri <adri@student.codam.nl>                 +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/03/15 13:22:32 by adri          #+#    #+#                  #
-#    Updated: 2023/03/23 15:54:15 by arommers      ########   odam.nl          #
+#    Updated: 2023/03/24 08:57:48 by arommers      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 NAME = push_swap
 LIBFT = ./libft/libft.a
 INCLUDE = -I./include

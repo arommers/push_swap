@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/27 14:49:24 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/23 15:53:46 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/24 09:45:55 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_stack {
 }	t_stack;
 
 // initialisation
+
 t_stack	*init_list(int argc, char **argv);
 void	set_index(t_stack *head, int list_size);
 
@@ -62,6 +63,7 @@ void	sort_three(t_stack **head);
 void	sort_five(t_stack **stack_a, t_stack **stack_b);
 void	radix_sort(t_stack **stack_a, t_stack **stack_b);
 void	sort_stack(t_stack **stack_a, t_stack **stack_b);
+int		sorted(t_stack **head);
 
 // input checks
 
@@ -71,10 +73,8 @@ int		check_doubles(char **argv);
 
 // miscellaneous
 
-int		sorted(t_stack **head);
 void	error_msg(char *str);
 void	free_stack(t_stack **head);
 int		count_arg(char **array);
-
 
 #endif
