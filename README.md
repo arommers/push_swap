@@ -11,9 +11,9 @@ In this repository, you'll find my implementation of the push swap algorithm, as
 
 To install Push Swap [download](https://github.com/arommers/push_swap/archive/master.zip) the program and use the command 'cd' to move to the push_swap folder.
 
-Run 'make' to compile all the files and run the executable 'push_wap' followed by a random number of integers
+Run 'make' to compile all the files and run the executable 'push_swap' followed by a random number of integers
 
-```bash
+```
 ./push_swap 24 -1 5673 -298 69 420
 ```
 ## Instructions
@@ -36,7 +36,7 @@ The goal is to sort the integers in Stack A in ascending order, using only the a
 
 An example:
 
-`./push_swap 548 0 -2146 12 32`
+`./push_swap 548 0 -2146 12 32`\
 `ra`\
 `pb`\
 `pb`\
@@ -55,15 +55,15 @@ These moves are realized by pointer manipulation of our linked lists.
 - Assign an index to each node and respective value.
 - Check if the numbers in Stack A are all sorted. If so, end the program without printing anything otherwise sort and print the executed moves to the `STDOUT`.
 
-## Algorithm
-
 When approaching the Push Swap project, one of the biggest challenges was deciding which sorting algorithm to use. The amount of algorithms to choose from, each with its own strengths and weaknesses, are plenty. However, at the time, I had limited knowledge of the efficiency of these algorithms, so it was challenging to make an informed decision.
 
-After some research and experimentation, I ultimately chose to implement radix sorting. Radix sort is a non-comparative sorting algorithm that sorts data by grouping elements into "buckets" based on their digits or bits. In our case the two buckets are our two stacks. I was drawn to radix sorting because of its efficiency with large numbers of input and the use of bitwise operations. Up until this point I knew of bitwise operations, but never had the opportunity to apply them. It seemed like a great opportinity.
+After some research and experimentation, I ultimately chose to implement radix sorting. Radix sort is a non-comparative sorting algorithm that sorts data by grouping elements into "buckets" based on their digits or bits. In our case the two buckets are our two stacks. I was drawn to radix sorting because of its efficiency with large numbers of input and the use of bitwise operations. Up until this point I wase aware of bitwise operations, but never had the opportunity to apply them. This seemed like a great occasion.
+
+## Algorithm
 
 Before sorting our list we simplify our numbers for two reasons. 
 
-First, Radix sort is a sorting algorithm that works by sorting the elements based on their digits. It sorts the elements by comparing the digits at different positions in each element. Since radix sort relies on the relative order of digits within the elements, it can only sort non-negative integers by their binary, decimal, or other positional representation. Negative integers cannot be sorted directly with radix sort because their binary representation involves a sign bit.\
+First, Radix sort is a linear sorting algorithm that works by sorting the elements based on their digits. It sorts the elements by comparing the digits at different positions in each element. Since radix sort relies on the relative order of digits within the elements, it can only sort non-negative integers by their binary, decimal, or other positional representation. Negative integers cannot be sorted directly with radix sort because their binary representation involves a sign bit.\
 Second, radix's [complexity](https://en.wikipedia.org/wiki/Analysis_of_algorithms) is based on the amount of bits respresenting an integer. We can reduce our big numbers to, at maximum, the biggest index in our linked list. Significantly reducing the number of operations needed to sort.
 
 For example, if we need to sort these numbers
