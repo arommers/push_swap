@@ -1,3 +1,5 @@
+![ALT TEXT](https://github.com/arommers/push_swap/blob/master/Codam%20Logo.png?raw=true)
+
 # Push Swap
 
 Push Swap is a sorting algorithm implementation designed as a project for School 42. The program takes an unsorted list of integers as input and should sort integers in ascending order using only two stacks and a limited set of operations. The aim of the project is to test the student's understanding of various sorting algorithms and data structures and their ability to implement this in code.
