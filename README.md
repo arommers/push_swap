@@ -9,6 +9,16 @@ In this repository, you'll find my implementation of the push swap algorithm, as
 
 ## Installation and Usage
 
-To install Push Swap [download](https://github.com/arommers/push_swap/archive/master.zip) the program and use the command cd to move to the push_swap folder.
+To install Push Swap [download](https://github.com/arommers/push_swap/archive/master.zip) the program and use the command 'cd' to move to the push_swap folder.
 
-Run 'make' to compile all the files.
+Run 'make' to compile all the files and run the executable 'push_wap' followed by a random number of integers
+
+```bash
+./push_swap 24 -1 5673 -298 69 420
+```
+
+
+## Sources
+
+- [Radix sort](https://medium.com/nerd-for-tech/push-swap-tutorial-fa746e6aba1e)
+- [Visualizer](https://github.com/o-reo/push_swap_visualizer)
