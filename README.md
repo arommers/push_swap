@@ -88,7 +88,7 @@ When we take our earlier input ```4 0 6 1 5 2 3``` their binary equivalents will
 The first argument will be at the top of our stack and subsequent numbers will be added behind/below it.
 
 Starting at the least significant bit, we use the AND bitwise operation [ARG & 1](https://www.programiz.com/c-programming/bitwise-operators#and) and check to see if there is either a `1` or a `0` at that position.
-If it's a 0 (lower in value), it get's pushed to Stack B, otherwise it rotates to the bottom. After all 0's have been pushed to Stack B, we push em all back to Stack A. We have now sorted our stack at the least significant bit position in 0's and 1's.
+If it's a 0 (lower in value), it get's pushed to Stack B, otherwise it rotates to the bottom. After all 0's have been pushed to Stack B, we push em all back to Stack A. Our list is now sorted at the least significant bit position in 0's and 1's.
 
 ```bash
 100                             100
