@@ -1,4 +1,5 @@
-![ALT TEXT](https://github.com/arommers/push_swap/blob/master/Codam%20Logo.png?raw=true)
+<img src="https://github.com/arommers/push_swap/blob/master/Codam%20Logo.png?raw=true" alt="CODAM" style="max-width: 50%;">
+
 
 # Push Swap
 
