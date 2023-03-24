@@ -3,9 +3,9 @@
 
 # Push Swap
 
-Push Swap is a sorting algorithm implementation designed as a project for School 42. The program takes an unsorted list of integers as input and should sort integers in ascending order using only two stacks and a limited set of operations. The aim of the project is to test the student's understanding of various sorting algorithms and data structures and their ability to implement this in code.
+Push Swap is a sorting algorithm implementation project and part of the school 42 core curriculum. The project tasks the students with writing a program that takes an unsorted list of integers as input and should sort them in ascending order using only two stacks and a limited set of operations. The aim of the project is to test the student's understanding of various sorting algorithms, their corresponding complexities and data structures and the student's ability to implement this in code.
 
-In this repository, you'll find my implementation of the push swap algorithm, as well as detailed information on how to use the program and how it works under the hood. I've also included my thought process and some tips for how to approach the project. Whether you're a 42 student looking to learn more about algorithm design and optimization, or just someone curious about the push swap algorithm, I hope this repository will be a helpful resource for you.
+In this repository, you'll find my implementation of the push swap algorithm, as well as detailed information on how to use the program and some of its pros and cons. I've also included my thought process and some tips for how to approach the project. Whether you're a 42 student looking to learn more about algorithm design and optimization, or just someone curious about the push swap algorithm, I hope this repository will be a helpful resource for you.
 
 ## Installation and Usage
 
@@ -47,7 +47,7 @@ An example:
 `pa`\
 `sa`
 
-These moves are realized by pointer manipulation in our linked lists.
+These moves are realized by pointer manipulation of our linked lists.
 
 ## Approach
 
@@ -61,10 +61,10 @@ When approaching the Push Swap project, one of the biggest challenges was decidi
 
 After some research and experimentation, I ultimately chose to implement radix sorting. Radix sort is a non-comparative sorting algorithm that sorts data by grouping elements into "buckets" based on their digits or bits. In our case the two buckets are our two stacks. I was drawn to radix sorting because of its efficiency with large numbers of input and the use of bitwise operations. Up until this point I knew of bitwise operations, but never had the opportunity to apply them. It seemed like a great opportinity.
 
-The radix sort algorithm is for non-negative integers. However, we’ll have negative numbers in this project, so we should simplify the numbers before we start. 
+Before sorting our list we simplify our numbers for two reasons. 
 
-The reason for this is twofold. First, Radix sort is a sorting algorithm that works by sorting the elements based on their digits. It sorts the elements by comparing the digits at different positions in each element. Since radix sort relies on the relative order of digits within the elements, it can only sort non-negative integers by their binary, decimal, or other positional representation. Negative integers cannot be sorted directly with radix sort because their binary representation involves a sign bit.\
-Second, because radix's efficiency is based on the amount of bits respresenting an integer. If we can reduce our big numbers to, at maximum, the        biggest index in our linked list, it will significantly reduce the number of operations needed to sort.
+First, Radix sort is a sorting algorithm that works by sorting the elements based on their digits. It sorts the elements by comparing the digits at different positions in each element. Since radix sort relies on the relative order of digits within the elements, it can only sort non-negative integers by their binary, decimal, or other positional representation. Negative integers cannot be sorted directly with radix sort because their binary representation involves a sign bit.\
+Second, radix's [complexity](https://en.wikipedia.org/wiki/Analysis_of_algorithms) is based on the amount of bits respresenting an integer. We can reduce our big numbers to, at maximum, the biggest index in our linked list. Significantly reducing the number of operations needed to sort.
 
 For example, if we need to sort these numbers
 
@@ -78,17 +78,17 @@ We want to replace them with 0, 1, 2, ...
 
 So, instead of sorting ```87 -487 781 -100 101 0 1```, now we only need to sort ```4 0 6 1 5 2 3```.
 
-With this idea, we can simplify any list of integers to make them in the range [0,N) ( ≥ 0 and < N, N is the size of the list).
+With this method we can simplify any list of integers to make them in the range [0,N) ( ≥ 0 and < N, N is the size of the list).
 
-In binary sorting of radix sort, each element in the list is viewed as a string of bits, and the algorithm sorts the elements based on the values of each bit position, starting from the least significant bit (rightmost) to the most significant bit (leftmost). This process is repeated until all bit positions have been considered, and the list is sorted. As mentioned above, one of the reasons why we reduce the actual numbers to inde values. Less bits to take into consideration.
+When binary sorting with radix sort, each element in the list is viewed as a string of bits, and the algorithm sorts the elements based on the values of each bit position, starting from the least significant bit (rightmost) to the most significant bit (leftmost). This process is repeated until all bit positions have been considered, and the list is sorted. As mentioned above, one of the reasons why we reduce the actual numbers to index values. Less bits to take into consideration.
 
 #### The Actual Sorting
 
-When we take our earlier input ```4 0 6 1 5 2 3``` their binary values will be ```100 000 110 001 101 010 11```.
-The first argument will be at the top of our stack and subsequent numbers will be added behind it.
+When we take our earlier input ```4 0 6 1 5 2 3``` their binary equivalents will be ```100 000 110 001 101 010 11```.
+The first argument will be at the top of our stack and subsequent numbers will be added behind/below it.
 
-Starting at the least significant bit, we use bitwise operations `(ARG & 1)` and check to see if there is either a `1` or a `0`
-If it's a 0 (lower in value), it get's pushed to Stack B, otherwise it rotates to the bottom. After all 0's have been pushed to Stack B, we push em all back to Stack A sorting the least significant bit position in 0's and 1's. We then move one bit to the left and perform the same sorting process.
+Starting at the least significant bit, we use the AND bitwise operation [ARG & 1](https://www.programiz.com/c-programming/bitwise-operators#and) and check to see if there is either a `1` or a `0` at that position.
+If it's a 0 (lower in value), it get's pushed to Stack B, otherwise it rotates to the bottom. After all 0's have been pushed to Stack B, we push em all back to Stack A. We have now sorted our stack at the least significant bit position in 0's and 1's.
 
 ```bash
 100                             100
