@@ -36,11 +36,10 @@ The goal is to sort the integers in Stack A in ascending order, using only the a
 
 An example:
 
-`./push_swap 548 0 -2146 12 32`\
+`./push_swap 54 0 -46 13`\
 `ra`\
 `pb`\
 `pb`\
-`ra`\
 `ra`\
 `ra`\
 `pa`\
@@ -87,7 +86,7 @@ When binary sorting with radix sort, each element in the list is viewed as a str
 When we take our earlier input ```4 0 6 1 5 2 3``` their binary equivalents will be ```100 000 110 001 101 010 11```.
 The first argument will be at the top of our stack and subsequent numbers will be added behind/below it.
 
-Starting at the least significant bit, we use the AND bitwise operation [ARG & 1](https://www.programiz.com/c-programming/bitwise-operators#and) and check to see if there is either a `1` or a `0` at that position.
+Starting at the least significant bit, we use the `AND` bitwise operation [ARG & 1](https://www.programiz.com/c-programming/bitwise-operators#and) and check to see if there is either a `1` or a `0` at that position.
 If it's a 0 (lower in value), it get's pushed to Stack B, otherwise it rotates to the bottom. After all 0's have been pushed to Stack B, we push em all back to Stack A. Our list is now sorted at the least significant bit position in 0's and 1's.
 
 ```bash
@@ -133,8 +132,8 @@ As you can see, the list is now completely sorted.
 
 ## Visualizer
 
-Below we have two visual representations of our program sorting respectively 100 and 500 random values using the push swap visualizer made by [Emmanuel Ruaud](https://github.com/o-reo)\
-This tool gives us a visual representation of the steps taken by the radix sorting algorithm. It is specifically noticable that our algorithm sorts by dividing our list into two "buckets" or Stacks constantly by pushing all 0 values into the right part and then returning them to the left part, before repeating it for the next bit position.
+Below we have two visual representations of our program sorting respectively 100 and 500 random values using the push swap visualizer made by [Emmanuel Ruaud](https://github.com/o-reo) that proves a visual aid to the actual sorting happening in real time.\
+This tool gives us a visual representation of the steps and instructions taken by the radix sorting algorithm. It is specifically noticable that our algorithm sorts by dividing our list into two "buckets" or Stacks constantly by pushing all 0 values into the right part, stack B, and then returning them to the left part, stack A, before repeating it for the next bit position.
 
 ##### Visual example of sorting 100 random values:
 
@@ -143,6 +142,10 @@ This tool gives us a visual representation of the steps taken by the radix sorti
 ##### Visual example of sorting 500 random values:
 
 ![Visualizer](https://imgur.com/Pb1KbxG.gif)
+
+## Limitations
+
+
 
 ## Sources
 
