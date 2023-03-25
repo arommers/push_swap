@@ -3,7 +3,7 @@
 
 # Push Swap
 
-Push Swap is a sorting algorithm implementation project and part of the school 42 core curriculum. The project tasks the students with writing a program that takes an unsorted list of integers as input and should sort them in ascending order using only two stacks and a limited set of operations. The aim of the project is to test the student's understanding of various sorting algorithms, their corresponding complexities and data structures and the student's ability to implement this in code.
+Push Swap is a sorting algorithm implementation project and part of the Codam/school 42 core curriculum. The project tasks the students with writing a program in C that takes an unsorted list of integers as input and should sort them in ascending order using only two stacks and a limited set of operations. The aim of the project is to test the student's understanding of various sorting algorithms, their corresponding complexities and data structures and the student's ability to implement this in code.
 
 In this repository, you'll find my implementation of the push swap algorithm, as well as detailed information on how to use the program and some of its pros and cons. I've also included my thought process and some tips for how to approach the project. Whether you're a 42 student looking to learn more about algorithm design and optimization, or just someone curious about the push swap algorithm, I hope this repository will be a helpful resource for you.
 
@@ -145,7 +145,13 @@ This tool gives us a visual representation of the steps and instructions taken b
 
 ## Limitations
 
+Although the radix sorting algorithm is stable and efficient when it comes to sorting a large amount of numbers, it has areas where it sadly doesn't excel when limiting it to only two "buckets" or stacks. Specifically in the small to medium range of numbers. When we want to sort a small amount of input or when our input is almost completely sorted, safe for one or two elements, radix sorting on the bits will still take into consideration every bit position of every number. This makes it wildly inefficient in these instances. Especially when being considered in the context of the Codam/ School 42 assigment. During the evaluation your code will be tested with different and specific amounts of input. Each input will be allowed only a certain amount of instructions and will be rated accordingly. Small amounts of input therefor had to be hardcoded to conform to these requirement, where radix sorting just didn't suffice. Even in the instance of midrange input radix needed a suboptimal amount of instructions.
 
+## Concluding remarks
+
+Push swap was an interesting way to get my toes wet with the concept of sorting algorithms and everything it entails. Through the project, I gained a deeper understanding of how algorithms work and the principles that underlie them. Not only did push offer the opportunity to dive into sorting algorithms, it also provided a setting to fumble around with creating linked lists and manipulating them with pointers. Working with pointers is still a humbling experience but this project furthered my understanding and application of them.
+
+Overall, I found the push swap project to be an engaging experience that deepened my appreciation for the intricacies of programming and algorithms. It challenged me to think critically and creatively, and provided me with valuable insights that I will carry with me as I continue to grow and develop as a programmer.
 
 ## Sources
 
