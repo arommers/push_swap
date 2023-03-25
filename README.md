@@ -3,9 +3,9 @@
 
 # Push Swap
 
-Push Swap is a sorting algorithm implementation project and part of the Codam/school 42 core curriculum. The project tasks the students with writing a program in C that takes an unsorted list of integers as input and should sort them in ascending order using only two stacks and a limited set of operations. The aim of the project is to test the student's understanding of various sorting algorithms, their corresponding complexities and data structures and the student's ability to implement this in code.
+Push Swap is a sorting algorithm implementation project and part of the Codam/school 42 core curriculum. The project tasks the students with writing a program in C that takes an unsorted list of integers as input and sorts them in ascending order using only two "stacks" and a limited set of operations. The aim of the project is to test the student's understanding of various sorting algorithms, their corresponding complexities and data structures, and the student's ability to implement this in code.
 
-In this repository, you'll find my implementation of the push swap algorithm, as well as detailed information on how to use the program and some of its pros and cons. I've also included my thought process and some tips for how to approach the project. Whether you're a 42 student looking to learn more about algorithm design and optimization, or just someone curious about the push swap algorithm, I hope this repository will be a helpful resource for you.
+In this repository, you'll find my implementation of the push swap project, as well as detailed information on how to use the program and some of its pros and cons. I've also included my thought process and some tips for how to approach the project. Whether you're a 42 student looking to learn more about algorithm design and optimization, or just someone curious about the push swap algorithm, I hope this repository will be a helpful resource for you.
 
 ## Installation and Usage
 
@@ -32,7 +32,7 @@ To sort the input arguments, the Push Swap program uses two stacks (Stack A and 
 - `rrb`: reverse rotate b - shift all elements of stack B down by one. The last element becomes the first one
 - `rrr`: reverse rotate both - reverse rotate both stacks A and B at the same time
 
-The goal is to sort the integers in Stack A in ascending order, using only the allowed moves listed above in the least amount of moves. The program will write each executed move to the `STDOUT` followed by a `'\n`. After running push swap, Stack A will be sorted and Stack B empty.
+The goal is to sort the integers in Stack A in ascending order, using only the allowed moves listed above in the least amount of moves. The program will write each executed move to the `STDOUT` followed by a `'\n`. After running push swap, Stack A should be sorted and Stack B empty.
 
 An example:
 
@@ -46,13 +46,12 @@ An example:
 `pa`\
 `sa`
 
-These moves are realized by pointer manipulation of our linked lists.
-
 ## Approach
 
-- Parsing, put numbers in stack A if no errors are detected. Each individual number/value was stored in a node of a linked list.
+- Parsing, put all numbers in stack A if no errors are detected. Each individual number/value was stored in a node of a linked list. One list to represent stack A and an empty list to represent stack B..
 - Assign an index to each node and respective value.
 - Check if the numbers in Stack A are all sorted. If so, end the program without printing anything otherwise sort and print the executed moves to the `STDOUT`.
+The sortin is done through the moves or operations mentioned above and realized by pointer manipulation of our linked list.
 
 When approaching the Push Swap project, one of the biggest challenges was deciding which sorting algorithm to use. The amount of algorithms to choose from, each with its own strengths and weaknesses, are plenty. However, at the time, I had limited knowledge of the efficiency of these algorithms, so it was challenging to make an informed decision.
 
