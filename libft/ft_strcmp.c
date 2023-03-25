@@ -1,39 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strjoin.c                                       :+:    :+:            */
+/*   ft_strcmp.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/26 08:20:45 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/25 15:07:40 by arommers      ########   odam.nl         */
+/*   Created: 2023/03/25 14:03:34 by arommers      #+#    #+#                 */
+/*   Updated: 2023/03/25 14:06:47 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char *s1, char *s2)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	int		i;
-	int		j;
-	char	*new;
+	size_t	i;
 
 	i = 0;
-	j = 0;
-	if (!s1)
-		s1 = gnl_calloc(1, 1);
-	if (!s1 || !s2)
-		return (free(s1), NULL);
-	new = (char *)malloc(sizeof(char) * (gnl_strlen(s1) + gnl_strlen(s2) + 1));
-	if (!new)
-		return (free(s1), NULL);
-	while (s1[i])
+	while (s1[i] || s2[i])
 	{
-		new[i] = s1[i];
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		i++;
+		if (s1 == NULL)
+			return (0);
 	}
-	while (s2[j])
-		new[i++] = s2[j++];
-	new[i] = '\0';
-	return (free(s1), new);
+	return (0);
 }
