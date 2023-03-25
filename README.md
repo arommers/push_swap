@@ -131,6 +131,19 @@ a      b        a      b        a      b
 
 As you can see, the list is now completely sorted.
 
+## Visualizer
+
+Below we have two visual representations of our program sorting respectively 100 and 500 random values using the push swap visualizer made by [Emmanuel Ruaud](https://github.com/o-reo)\
+This tool gives us a visual representation of the steps taken by the radix sorting algorithm. It is specifically noticable that our algorithm sorts by dividing our list into two "buckets" or Stacks constantly by pushing all 0 values into the right part and then returning them to the left part, before repeating it for the next bit position.
+
+##### Visual example of sorting 100 random values:
+
+![Visualizer](https://imgur.com/oqhxixd.gif)
+
+##### Visual example of sorting 500 random values:
+
+![Visualizer](https://imgur.com/Pb1KbxG.gif)
+
 ## Sources
 
 - [Radix sort](https://medium.com/nerd-for-tech/push-swap-tutorial-fa746e6aba1e)
