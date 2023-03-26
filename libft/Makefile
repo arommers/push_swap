@@ -6,7 +6,7 @@
 #    By: arommers <arommers@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/10 14:07:45 by arommers      #+#    #+#                  #
-#    Updated: 2023/03/21 10:21:47 by adri          ########   odam.nl          #
+#    Updated: 2023/03/26 15:11:00 by adri          ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,8 @@ SRC =  ft_split.c ft_itoa.c 			\
 		ft_printf.c ft_print_hex.c		\
 		ft_print_ptr.c					\
 		ft_print_various.c				\
-		ft_print_unsigned.c
+		ft_print_unsigned.c				\
+		ft_strcmp.c
 
 OBJ_DIR = obj
 OBJ = $(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
@@ -66,15 +67,15 @@ PINK 	:= \033[35m
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@echo "Compiled with $(BLUE)$(BOLD)$(CFLAGS)$(RESET)"
+	@echo "Compiled with $(GREEN)$(BOLD)$(CFLAGS)$(RESET)"
 	@ar -rcs $@ $^
-	@echo "$(PINK)$(BOLD)----------------------------------------"
+	@echo "$(YELLOW)$(BOLD)----------------------------------------"
 	@echo "     $(NAME) = NOW READY FOR USE!"
 	@echo "----------------------------------------$(RESET)"
 	
 $(OBJ_DIR)/%.o: %.c
 	@mkdir -p $(OBJ_DIR)
-	@echo "Compiled ✅ $(PINK) $(BOLD) $^ $(RESET)"
+	@echo "Compiled ✅ $(YELLOW) $(BOLD) $^ $(RESET)"
 	@$(CC) $(CFLAGS) $(INCLUDE) -c -o $@ $^
 	
 

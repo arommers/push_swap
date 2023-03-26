@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   input_check.c                                      :+:    :+:            */
+/*   check_util3.c                                      :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: arommers <arommers@student.codam.nl>         +#+                     */
+/*   By: adri <adri@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/03/19 11:14:39 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/26 13:27:14 by adri          ########   odam.nl         */
+/*   Created: 2023/03/26 13:06:11 by adri          #+#    #+#                 */
+/*   Updated: 2023/03/26 15:03:48 by adri          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 
 int	check_doubles(char **argv)
 {

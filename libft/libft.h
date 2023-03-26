@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/14 16:51:47 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/25 14:06:42 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/26 13:24:37 by adri          ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdio.h>
 # include <fcntl.h>
 # include <stdarg.h>
+# include <limits.h>
 # include "get_next_line.h"
 # include "ft_printf.h"
 
