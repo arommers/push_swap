@@ -6,7 +6,7 @@
 #    By: adri <adri@student.codam.nl>                 +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/03/15 13:22:32 by adri          #+#    #+#                  #
-#    Updated: 2023/03/26 15:11:26 by adri          ########   odam.nl          #
+#    Updated: 2023/03/26 22:24:12 by adri          ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRC =	./src/initialize.c ./src/linked_list.c		\
 		./src/sort_util.c
 BONUS_SRC = ./bonus/checker.c ./bonus/check_util1.c	\
 		./bonus/check_util2.c ./bonus/check_util3.c	\
-		./bonus/check_util4.c
+		./bonus/check_util4.c ./bonus/check_util5.c
 OBJ_DIR = obj
 OBJ = $(addprefix $(OBJ_DIR)/, $(notdir $(SRC:.c=.o)))
 BONUS_DIR = bonus_obj
