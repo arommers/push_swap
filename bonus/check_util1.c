@@ -6,7 +6,7 @@
 /*   By: adri <adri@student.codam.nl>                 +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/26 12:56:53 by adri          #+#    #+#                 */
-/*   Updated: 2023/03/27 09:40:13 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/27 16:58:16 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void	push(t_stack **stack_from, t_stack **stack_to)
 {
 	t_stack	*tmp;
 
-	if (stack_from == NULL)
+	if (stack_from == NULL || *stack_from == NULL)
 		return ;
 	tmp = *stack_from;
 	*stack_from = (*stack_from)->next;

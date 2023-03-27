@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/13 11:33:46 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/23 09:42:45 by arommers      ########   odam.nl         */
+/*   Updated: 2023/03/27 16:58:41 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	push(t_stack **stack_from, t_stack **stack_to)
 {
 	t_stack	*tmp;
 
-	if (stack_from == NULL)
+	if (stack_from == NULL || *stack_from == NULL)
 		return ;
 	tmp = *stack_from;
 	*stack_from = (*stack_from)->next;
