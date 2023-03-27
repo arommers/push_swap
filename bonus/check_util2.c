@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/25 16:57:02 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/26 15:01:15 by adri          ########   odam.nl         */
+/*   Updated: 2023/03/27 09:40:28 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ void	insert_at_tail(t_stack **head, int new_value)
 	new_node = make_new_node(new_value);
 	current->next = new_node;
 }
-
 
 void	set_index(t_stack *head, int link_size)
 {
