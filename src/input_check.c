@@ -6,7 +6,7 @@
 /*   By: arommers <arommers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/19 11:14:39 by arommers      #+#    #+#                 */
-/*   Updated: 2023/03/26 13:27:14 by adri          ########   odam.nl         */
+/*   Updated: 2023/03/27 12:07:54 by arommers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,7 @@ void	check_input(int argc, char **argv)
 	if (argc == 2)
 		tmp_array = ft_split(argv[1], ' ');
 	else
-	{
-		i = 1;
 		tmp_array = argv + 1;
-	}
 	while (tmp_array[i])
 	{
 		tmp_argv = ft_atoi(tmp_array[i]);
