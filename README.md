@@ -48,8 +48,9 @@ An example:
 
 ## Approach
 
-- Parsing, put all numbers in stack A if no errors are detected. Each individual number/value was stored in a node of a linked list. One list to represent stack A and an empty list to represent stack B..
+- Parsing, put all numbers in stack A if no errors are detected. Each individual number/value was stored in a node of a linked list. One list to represent stack A and an empty list to represent stack B.
 - Assign an index to each node and respective value.
+- Write the different instructions. This consisted of writing functions that would move pointer to the nodes in my linked list according with the change that needed to take place. For example, `SA` makes the head pointer point to `head->next`, what `head-next` was pointing at will now point to the previous `head` and the pointer to the `head` pointer changes to point at `head->next`.
 - Check if the numbers in Stack A are all sorted. If so, end the program without printing anything otherwise sort and print the executed moves to the `STDOUT`.
 The sortin is done through the moves or operations mentioned above and realized by pointer manipulation of our linked list.
 
